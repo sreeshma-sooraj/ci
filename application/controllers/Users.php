@@ -27,5 +27,19 @@ public function insert()
 
   ]);
 }
+
+public function update()
+{   
+    $id = 3;
+    $username = "shraavan";
+    $password = "123s";
+    $this->user_model->update_users([
+
+    'username' => $username,
+    'password' => $password
+
+
+  ],$id);
+}
 }
 ?>

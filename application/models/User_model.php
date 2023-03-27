@@ -36,10 +36,16 @@ class User_model extends CI_Model{
        // $connection_2 = $this->load->database($config_2);
     }
     public function create_users($data)
-  {
+    {
       
         $this->db->insert('users',$data);
     
     }
+    public function update_users($data, $id)
+    {
+          $this->db->where(['id' => $id]);
+          $this->db->update('users',$data);
+      
+      }
 }
 ?>
