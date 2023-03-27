@@ -4,7 +4,7 @@ public function show($user_id){
 
 
    // $this->load->model('user_model');
-    $data['result'] = $this->user_model->get_users($user_id);
+    $data['result'] = $this->user_model->get_users($user_id,'anu');
     $this->load->view('user_view',$data);
    // $data['welcome'] = " Welcome to my page";
 

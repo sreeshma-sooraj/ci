@@ -2,8 +2,13 @@
 class User_model extends CI_Model{
     
     
-    public function get_users($user_id){
-        $this->db->where('id',$user_id);
+    public function get_users($user_id,$username){
+        $this->db->where(['id'=> $user_id,
+        'username' => $username
+    
+    
+    
+      ]);
         $query = $this->db->get('users');
         return $query->result();
 
@@ -20,7 +25,7 @@ class User_model extends CI_Model{
 
 
 
-
+       // $this->db->where('id',$user_id);
 
        // $query =$this->db->query("SELECT * FROM users");
         //return $query->num_rows();//this give me the rows count
