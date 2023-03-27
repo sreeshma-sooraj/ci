@@ -14,5 +14,18 @@ public function show($user_id){
    // }
 
 }
+
+public function insert()
+{
+    $username = "kinku";
+    $password = "kinku123";
+    $this->user_model->create_users([
+
+    'username' => $username,
+    'password' => $password
+
+
+  ]);
+}
 }
 ?>

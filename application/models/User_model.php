@@ -12,20 +12,7 @@ class User_model extends CI_Model{
         $query = $this->db->get('users');
         return $query->result();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-       // $this->db->where('id',$user_id);
+     // $this->db->where('id',$user_id);
 
        // $query =$this->db->query("SELECT * FROM users");
         //return $query->num_rows();//this give me the rows count
@@ -47,6 +34,12 @@ class User_model extends CI_Model{
 
        // $connection = $this->load->database($config);
        // $connection_2 = $this->load->database($config_2);
+    }
+    public function create_users($data)
+  {
+      
+        $this->db->insert('users',$data);
+    
     }
 }
 ?>
