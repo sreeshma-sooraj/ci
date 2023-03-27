@@ -5,11 +5,11 @@
 <body>
 <h1>
     <?php
-    echo $result;
+    //echo $result;
 //echo $welcome;
-//foreach ($result as $object){
-    //  echo $object->username . "<br>";
-   //}
+foreach ($result as $object){
+     echo $object->username . "<br>";
+   }
     ?>
     </h1>
 
