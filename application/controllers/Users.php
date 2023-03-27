@@ -41,5 +41,10 @@ public function update()
 
   ],$id);
 }
+public function delete()
+{
+  $id =3;
+  $this->user_model->delete_users($id);
+}
 }
 ?>
