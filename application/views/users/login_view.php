@@ -1,4 +1,4 @@
-<h4>Login Form</h4>
+<h1>Login Form</h1>
 <?php $attribute = array('id' => 'login_form' , 'class' => 'form_horizontal'); ?>
 <?php echo form_open('users/login',$attribute);?>
 

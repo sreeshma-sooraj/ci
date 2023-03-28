@@ -6,7 +6,13 @@ public function login(){
      $this->form_validation->set_rules('username','Username','trim|required|min_length[3]');
      $this->form_validation->set_rules('password','Password','trim|required|min_length[3]');
 
+if($this->form_validation-> run() == FALSE){
+  $data = array(
 
+      'errors' => validation_errors();
+
+  );
+}
   //echo $this->input->post('username');
   //echo " this works";
   //echo $_POST['username'];
