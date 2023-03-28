@@ -1,6 +1,21 @@
 <?php
 class Users extends CI_Controller{
-public function show($user_id){
+
+public function login(){
+echo $this->input->post('username');
+
+  //echo " this works";
+  //echo $_POST['username'];
+}
+
+
+
+
+
+
+
+
+/*public function show($user_id){
 
 
    // $this->load->model('user_model');
@@ -46,6 +61,6 @@ public function delete()
   $id =3;
   $this->user_model->delete_users($id);
   
-}
+}*/
 }
 ?>
