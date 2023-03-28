@@ -2,8 +2,12 @@
 class Users extends CI_Controller{
 
 public function login(){
-echo $this->input->post('username');
 
+     $this->form_validation->set_rules('username','Username','trim|required|min_length[3]');
+     $this->form_validation->set_rules('password','Password','trim|required|min_length[3]');
+
+
+  //echo $this->input->post('username');
   //echo " this works";
   //echo $_POST['username'];
 }
