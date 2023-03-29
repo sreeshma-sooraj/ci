@@ -19,7 +19,7 @@ public function login(){
   redirect('home');
 }
 else {
-  $username = $this->input->post('username');
+  $username = $this->input->post('username'); 
   $password = $this->input->post('password');
 
   $this->user_model->login_user($username,$password);
