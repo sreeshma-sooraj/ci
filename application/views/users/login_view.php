@@ -1,6 +1,25 @@
 <?php if($this->session->userdata('logged_in')): ?>
+<h2>Logout</h2>
+    <?php echo form_open('users/logout'); ?>
+    <p>
+    <?php if($this->session->userdata['username']):?>
+        <?php echo "You are logged as" . $this->session->userdata('username'); ?>
+        <?php endif; ?>
+    </p>
 
-    <?php echo "logout"; ?>
+    <?php 
+    
+       $data = array(
+
+       'class' => 'btn btn-primary',
+       'name'  => 'submit',
+       'value' => 'Logout'
+
+       );
+    
+    ?>
+    <?php echo form_submit($data); ?>
+    <?php echo form_close(); ?>
 
     <?php else: ?>
 
