@@ -5,6 +5,7 @@ public function login(){
 
      $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]');
      $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
+     $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required|min_length[3]|matches[password]');
    
 
      if ($this->form_validation->run() == FALSE) {
@@ -13,7 +14,7 @@ public function login(){
       'errors' => validation_errors()
 
   );
-  //print_r($data);
+ //print_r($data);
   $this->session->set_flashdata($data);
   redirect('home');
 }

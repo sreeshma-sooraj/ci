@@ -4,7 +4,7 @@
 <?php  if($this->session->flashdata('errors')): ?>
 <?php echo $this->session->flashdata('errors'); ?>
 
-<?php endif ?>    
+<?php endif; ?>    
 <?php echo form_open('users/login',$attribute);?>
 
 <div class="form-group">
@@ -15,7 +15,7 @@
 <?php 
 
     $data = array(
-    'class' => 'form_control',
+    'class' => 'form-control',
     'name' => 'username',
     'placeholder' => 'Enter username'
     );
@@ -31,13 +31,31 @@
 <?php 
 
     $data = array(
-    'class' => 'form_control',
+    'class' => 'form-control',
     'name' => 'password',
     'placeholder' => 'Enter password'
     );
 ?>
 <?php echo form_password($data);?>
 </div>
+
+<div class="form-group">
+
+<?php echo form_label('Confirm Password');?>
+
+
+<?php 
+
+    $data = array(
+    'class' => 'form-control',
+    'name' => 'confirm_password',
+    'placeholder' => 'Confirm password'
+    );
+?>
+<?php echo form_password($data);?>
+</div>
+
+
 
 <div class="form-group">
 
