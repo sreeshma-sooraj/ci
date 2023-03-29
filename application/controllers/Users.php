@@ -22,7 +22,22 @@ else {
   $username = $this->input->post('username'); 
   $password = $this->input->post('password');
 
-  $this->user_model->login_user($username,$password);
+  $user_id = $this->user_model->login_user($username,$password);
+     if( $user_id ){
+      $user_data = array(
+
+          'user_id' => $user_id,
+          'username' => $username,
+          'logged_in' => true
+
+      );
+
+      $this->session->set_userdata($user_data);
+      redirect('home/index');
+     }
+     else{
+      redirect('home/index');
+     }
 }
   //echo $this->input->post('username');
   //echo " this works";
