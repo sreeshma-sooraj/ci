@@ -18,6 +18,12 @@ public function login(){
   $this->session->set_flashdata($data);
   redirect('home');
 }
+else {
+  $username = $this->input->post('username');
+  $password = $this->input->post('password');
+
+  $this->user_model->login_user($username,$password);
+}
   //echo $this->input->post('username');
   //echo " this works";
   //echo $_POST['username'];
