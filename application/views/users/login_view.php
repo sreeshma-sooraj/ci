@@ -1,3 +1,11 @@
+<?php if($this->session->userdata('logged_in')): ?>
+
+    <?php echo "logout"; ?>
+
+    <?php else: ?>
+
+
+
 <h1>Login Form</h1>
 <?php $attribute = array('id' => 'login_form' , 'class' => 'form_horizontal'); ?>
 
@@ -71,3 +79,4 @@
 </div>
 
 <?php echo form_close();?>
+<?php endif; ?>
