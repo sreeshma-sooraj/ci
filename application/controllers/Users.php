@@ -2,11 +2,20 @@
 class Users extends CI_Controller{
   
   public function register(){
-
+    $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('last_name',  'Last Name', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required|min_length[3]|matches[password]');
+    if ($this->form_validation->run() == FALSE) {
       $data['main_view'] = 'users/register_view';
       $this->load->view('layouts/main', $data );
-
-
+  
+    }
+    else{
+     
+    }
   }
 
 public function login(){
