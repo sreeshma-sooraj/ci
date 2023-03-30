@@ -11,12 +11,14 @@ public function login(){
      if ($this->form_validation->run() == FALSE) {
      $data = array(
 
-      'errors' => validation_errors()
+      'errors' => validation_errors(),
+      'main_view'=>'home_view'
 
   );
  //print_r($data);
   $this->session->set_flashdata($data);
-  redirect('home');
+  //redirect('home');
+  $this->load->view('layouts/main',$data);
 }
 else {
   $username = $this->input->post('username'); 
