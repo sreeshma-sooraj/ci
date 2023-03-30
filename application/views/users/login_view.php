@@ -3,7 +3,7 @@
     <?php echo form_open('users/logout'); ?>
     <p>
     <?php if($this->session->userdata['username']):?>
-        <?php echo "You are logged as" . $this->session->userdata('username'); ?>
+        <?php echo "You are logged as " .  $this->session->userdata('username'); ?>
         <?php endif; ?>
     </p>
 

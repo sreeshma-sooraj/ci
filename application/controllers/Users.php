@@ -36,7 +36,10 @@ else {
 
       $this->session->set_userdata($user_data);
       $this->session->set_flashdata('login_success','you are now loged in');
-      redirect('home/index');
+
+      $data['main_view'] = "admin_view";
+      $this->load->view('layouts/main', $data);
+      //redirect('home/index');
      }
      else{
       $this->session->set_flashdata('login_failed','sorry you are not loged in');
