@@ -100,5 +100,12 @@ public function delete()
   $this->user_model->delete_users($id);
   
 }*/
+public function logout(){
+
+  $this->session->sess_destroy();
+  redirect('home/index');
+
+}
+
 }
 ?>
