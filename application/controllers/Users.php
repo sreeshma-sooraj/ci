@@ -15,6 +15,7 @@ class Users extends CI_Controller{
     }
     else{
      $this->user_model->create_user();
+     redirect('home/index');
     }
   }
 
