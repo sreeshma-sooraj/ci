@@ -4,7 +4,11 @@
         <?php echo $this->session->flashdata('login_success'); ?>
         
     <?php endif; ?>
+    <?php if($this->session->flashdata('user_registerd')): ?>
 
+    <?php echo $this->session->flashdata('user_registerd'); ?>
+
+<?php endif; ?>
 </p>
 
 <p class="bg-danger">
