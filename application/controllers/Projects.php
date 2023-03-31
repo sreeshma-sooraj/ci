@@ -8,9 +8,9 @@ class Projects extends CI_Controller{
             $this->session->set_flashdata('no_access', 'Sorry you are NOT allowed or not logged in it');
            //redirect('home/index');
         
-
+          
            $data['main_view'] = "home_view";
-           $this->load->view('layouts/main', $data);
+           //$this->load->view('layouts/main', $data);
         }
 
     }
