@@ -68,7 +68,9 @@ else {
      }
      else{
       $this->session->set_flashdata('login_failed','sorry you are not loged in');
-      redirect('home/index');
+      //redirect('home/index');
+      $data['main_view'] = "home_view";
+      $this->load->view('layouts/main', $data);
      }
 }
   //echo $this->input->post('username');
