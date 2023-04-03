@@ -9,7 +9,11 @@ public function get_projects()
     return  $query->result();
     
 }
-
+public function get_project($id){
+    $query = $this->db->get('project');
+    $this->db->where('id' => $id)
+    return $query->row();
+}
 }
 
 ?>
