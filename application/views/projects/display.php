@@ -1,7 +1,21 @@
-<h1>project name</h1>
+<div class="container">
+<div class="row">
+<div class="col-sm-9">
+
+<h1>Project name</h1>
+</div>
+</div>
+
+
+ 
+<div class="row justify-content-end">
+<div class="col-sm-3 ">
 <ul class="list-group">
-    <h3>Project Actions</h3>
-   <li class="list-group-item"><a href="<?php echo base_url();  ?>/task/create/<?php echo $project->id ?>">Create Task</a></li>
+    <h4>Project Actions</h4>
+    
    <li class="list-group-item"><a href="">Edit Project</a></li>
    <li class="list-group-item"><a href="">Delete Project</a></li>
-</u>   
+</ul>   
+</div>
+</div>
+</div>

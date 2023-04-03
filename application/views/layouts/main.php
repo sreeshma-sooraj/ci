@@ -27,8 +27,15 @@
       <a class="nav-link" href="<?php echo base_url(); ?>users/register">Register<span class="sr-only">(current)</span></a>
       </li>
       </ul>
+      <?php if($this->session->userdata('logged_in')): ?>
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span>link</a></li>
+
+     
+     
+        
+      <li><a href="<?php echo base_url(); ?>users/logout"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+        <?php endif; ?>
+    
       
     </ul>
    
