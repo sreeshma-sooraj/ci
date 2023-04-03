@@ -31,6 +31,23 @@ class Projects extends CI_Controller{
         $this->load->view('layouts/main', $data);
   
     }
+    public function create(){
+        $this->form_validation->set_rules('project_name', 'Project Name', 'trim|required');
+        $this->form_validation->set_rules('project_body',  'Project Body', 'trim|required');
+        if ($this->form_validation->run() == FALSE){
+            $data['main_view'] = "projects/create_project";  
+            $this->load->view('layouts/main', $data);
+        }
+        else{
+            $user_data = array(
+
+                'project_name' => $this->input->post('project_name'); 
+                'project_body' => $this->input->post('project_body'); 
+               
+      
+            );
+        }
+    }
 }
 
 
