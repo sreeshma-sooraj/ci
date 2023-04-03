@@ -24,6 +24,9 @@
        
       </li>
       <li class="nav-item active">
+      <a class="nav-link" href="<?php echo base_url(); ?>projects/index">Projects<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
       <a class="nav-link" href="<?php echo base_url(); ?>users/register">Register<span class="sr-only">(current)</span></a>
       </li>
       </ul>
