@@ -10,8 +10,9 @@ public function get_projects()
     
 }
 public function get_project($id){
-    $query = $this->db->get('project');
-    $this->db->where('id' => $id)
+    $this->db->where('id', $id);
+    $query = $this->db->get('projects');
+  
     return $query->row();
 }
 }
