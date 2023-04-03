@@ -6,10 +6,10 @@ class Projects extends CI_Controller{
         if(!$this->session->userdata('logged_in')){
 
             $this->session->set_flashdata('no_access', 'Sorry you are NOT allowed or not logged in it');
-           //redirect('home/index');
+            //redirect('home/index');
         
           
-           $data['main_view'] = "home_view";
+          $data['main_view'] = "home_view";
            //$this->load->view('layouts/main', $data);
         }
 
@@ -23,6 +23,12 @@ class Projects extends CI_Controller{
 
        // echo" my first programe ";
        //$this->load->view('home_view');
+    }
+    public function display()
+    {
+        $data['main_view'] = "projects/display_view";
+        $this->load->view('layouts/main', $data);
+  
     }
 }
 
