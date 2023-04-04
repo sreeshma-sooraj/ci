@@ -15,6 +15,10 @@ public function get_project($id){
   
     return $query->row();
 }
+public function create_project($data){
+    $insert_query = $this->db->insert('projects', $data);
+    return $insert_query;
+}
 }
 
 ?>
