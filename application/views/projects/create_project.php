@@ -2,7 +2,7 @@
 <?php $attribute = array('id' => 'create_form' , 'class' => 'form_horizontal'); ?>
 
 <?php echo validation_errors("<p class='bg-danger'>"); ?>   
-<?php echo form_open('users/register',$attribute);?>
+<?php echo form_open('projects/create',$attribute);?>
 <div class="form-group">
 
 <?php echo form_label('Project Name');?>
@@ -54,7 +54,7 @@
     $data = array(
     'class' => 'btn btn-primary',
     'name' => 'submit',
-    'value' => 'Register'
+    'value' => 'Create'
     );
 ?>
 <?php echo form_submit($data);?>
