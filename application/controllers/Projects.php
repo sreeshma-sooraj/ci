@@ -39,13 +39,19 @@ class Projects extends CI_Controller{
             $this->load->view('layouts/main', $data);
         }
         else{
-            $user_data = array(
-
-                'project_name' => $this->input->post('project_name'); 
-                'project_body' => $this->input->post('project_body'); 
+            $data = array(
+                'project_user_id' => $this->session->userdata('user_id'),
+                'project_name' => $this->input->post('project_name'), 
+                'project_body' => $this->input->post('project_body')
                
       
             );
+
+            if($this->project_model->create_project($data)){
+                $this->session->set_flashdata('project_created','Your project has been created');
+                $data['main_view'] = "projects/index";
+                $this->load->view('layouts/main', $data);
+            }
         }
     }
 }
