@@ -9,7 +9,7 @@ class Projects extends CI_Controller{
             //redirect('home/index');
         
           
-          $data['main_view'] = "home_view";
+            $data['main_view'] = "home_view";
            //$this->load->view('layouts/main', $data);
         }
 
@@ -49,6 +49,30 @@ class Projects extends CI_Controller{
 
             if($this->project_model->create_project($data)){
                 $this->session->set_flashdata('project_created','Your project has been created');
+                $data['main_view'] = "projects/index";
+                $this->load->view('layouts/main', $data);
+            }
+        }
+    }
+
+    public function edit($project_id){
+        $this->form_validation->set_rules('project_name', 'Project Name', 'trim|required');
+        $this->form_validation->set_rules('project_body',  'Project Body', 'trim|required');
+        if ($this->form_validation->run() == FALSE){
+            $data['main_view'] = "projects/edit_project";  
+            $this->load->view('layouts/main', $data);
+        }
+        else{
+            $data = array(
+                'project_user_id' => $this->session->userdata('user_id'),
+                'project_name' => $this->input->post('project_name'), 
+                'project_body' => $this->input->post('project_body')
+               
+      
+            );
+
+            if($this->project_model->edit_project($data)){
+                $this->session->set_flashdata('project_updated','Your project has been updated');
                 $data['main_view'] = "projects/index";
                 $this->load->view('layouts/main', $data);
             }

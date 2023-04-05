@@ -6,7 +6,7 @@
 <?php endif; ?>
 </p>
 <h1>PROJECTS</h1>
-<a class="btn btn-primary float-right" href="<?php base_url(); ?> projects/create">Create Projects</a>
+<a class="btn btn-primary float-right" href="<?php echo base_url(); ?>projects/create">Create Projects</a>
 <table class="table table-hover">
   
     <thead>

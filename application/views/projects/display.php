@@ -14,8 +14,8 @@
 <div class="col-sm-3">
 <ul class="list-group">
     <h4>Project Actions</h4>
-<li class="list-group-item"><a href="">   Create Project</a></li>
-   <li class="list-group-item"><a href="">Edit Project</a></li>
+  <li class="list-group-item"><a href=""> Create Project</a></li>
+   <li class="list-group-item"><a href="<?php echo base_url(); ?>projects/edit">Edit Project</a></li>
    <li class="list-group-item"><a href="">Delete Project</a></li>
 </ul>   
 </div>
