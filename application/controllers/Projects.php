@@ -59,6 +59,9 @@ class Projects extends CI_Controller{
         $this->form_validation->set_rules('project_name', 'Project Name', 'trim|required');
         $this->form_validation->set_rules('project_body',  'Project Body', 'trim|required');
         if ($this->form_validation->run() == FALSE){
+
+$data['project_data'] = $this->project_model->get_project_info($project_id);
+
             $data['main_view'] = "projects/edit_project";  
             $this->load->view('layouts/main', $data);
         }

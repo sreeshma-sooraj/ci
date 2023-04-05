@@ -25,6 +25,12 @@ public function edit_project($project_id, $data){
     $this->db->update('projects',$data);
     return true;
 }
+
+public function get_project_info($project_id){
+    $this->db->where('id',$project_id);
+    $get_data = $this->db->get('projects');
+    return  $get_data->row();
+}
 }
 
 ?>
