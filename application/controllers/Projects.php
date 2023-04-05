@@ -74,7 +74,7 @@ $data['project_data'] = $this->project_model->get_project_info($project_id);
       
             );
 
-            if($this->project_model->edit_project($data)){
+            if($this->project_model->edit_project($project_id, $data)){
                 $this->session->set_flashdata('project_updated','Your project has been updated');
                 $data['main_view'] = "projects/index";
                 $this->load->view('layouts/main', $data);

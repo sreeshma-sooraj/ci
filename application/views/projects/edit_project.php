@@ -2,7 +2,7 @@
 <?php $attribute = array('id' => 'create_form' , 'class' => 'form_horizontal'); ?>
 
 <?php echo validation_errors("<p class='bg-danger'>"); ?>   
-<?php echo form_open('projects/edit',$attribute);?>
+<?php echo form_open('projects/edit/'.$project_data->id.'',$attribute);?>
 <div class="form-group">
 
 <?php echo form_label('Project Name');?>
@@ -13,7 +13,7 @@
     $data = array(
     'class' => 'form-control',
     'name' => 'project_name',
-    'value' => 
+    'value' => $project_data->project_name
     );
 ?>
 <?php echo form_input($data);?>
@@ -29,7 +29,7 @@
     $data = array(
     'class' => 'form-control',
     'name' => 'project_body',
-    'value' => 
+    'value' => $project_data->project_body
     
     );
 ?>
