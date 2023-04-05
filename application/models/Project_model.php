@@ -25,6 +25,10 @@ public function edit_project($project_id, $data){
     $this->db->update('projects',$data);
     return true;
 }
+public function delete_project($project_id){
+    $this->db->where('id',$project_id);
+    $this->db->delete('projects');
+}
 
 public function get_project_info($project_id){
     $this->db->where('id',$project_id);
