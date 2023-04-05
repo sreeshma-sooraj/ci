@@ -13,7 +13,7 @@
     $data = array(
     'class' => 'form-control',
     'name' => 'project_name',
-    'placeholder' => 'Enter project name'
+    'value' => 
     );
 ?>
 <?php echo form_input($data);?>
@@ -28,7 +28,8 @@
 
     $data = array(
     'class' => 'form-control',
-    'name' => 'project_body'
+    'name' => 'project_body',
+    'value' => 
     
     );
 ?>

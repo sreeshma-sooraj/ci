@@ -19,6 +19,12 @@ public function create_project($data){
     $insert_query = $this->db->insert('projects', $data);
     return $insert_query;
 }
+
+public function edit_project($project_id, $data){
+    $this->db->where('id',$project_id);
+    $this->db->update('projects',$data);
+    return true;
+}
 }
 
 ?>
